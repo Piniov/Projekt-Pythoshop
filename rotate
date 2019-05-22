@@ -1,0 +1,15 @@
+def rotate(x):
+    print("O ile stopni chcesz obrócić obraz?(90,180,270)")
+    x=input()
+    if x=="90":
+        im = Image.open(x).rotate(90) #rotates image by 90 degrees 
+    elif x=="180":
+        im = Image.open(x).rotate(180) #rotates image by 180 degrees
+    elif x=="270":
+        im = Image.open(x).rotate(270) #rotates image by 270 degrees
+    else:
+        print("Podano błędną wartość ") #text that will be displayed if user input was invalid
+    im.show() #displays rotated image
+
+
+rotate(x) #x - is a name of the picture which was chosen by user
