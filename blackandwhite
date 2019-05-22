@@ -1,0 +1,15 @@
+from __future__ import print_function
+import PIL
+from PIL import Image
+
+def kolor(x):
+    print("Chcesz czarno białe zdjęcie?(y/n)") #asks user if he wants b&w or colored picture
+    m = input()
+    if m=="y":
+        im = Image.open(x).convert("L") #changes colors to black and white
+    else:
+        im = Image.open(x) #changes colors to RGB
+    im.show()
+
+x="obraz.jpg" #any picture
+kolor(x)
