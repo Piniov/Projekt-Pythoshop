@@ -5,7 +5,7 @@ def save_file(x):   #x - chosen file which user wants to save
     im = Image.open(x)
     print ("Wpisz nazwę nowego pliku")
     new_name = input()  #user has to name new file
-    extension = '.jpg'  #extension is needed to allow Python writing a file as a picture file
+    extension = '.jpg'  #extension is needed to allow Python to write a file as a picture file
     new_file = new_name + extension
     save_new_file = im.save(new_file)   #save() is a Pillow module function
     print ("Oto nazwa nowo utworzonego pliku:", new_file)
