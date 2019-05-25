@@ -48,11 +48,11 @@ def scale(obrazek):
     while True:
         if scale_choice == 1:
             width=640
-            height=480
-            obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
-            type=".jpg"
-            obrazek.save("nowy" + type)
-            obrazek.show()
+            height=480 #scale 4:3
+            obrazek=obrazek.resize((width,height), Image.ANTIALIAS) #proper scaling of an image
+            type=".jpg" #a file format
+            obrazek.save("nowy" + type) #naming a new picture
+            obrazek.show() #displays a new image
             print()
             print("Oto rozmiar przeskalowanego pliku (4:3): ", obrazek.size)
             if input("Chcesz zakończyć działanie programu - 'Q', czy dokonać wyboru innej opcji -'R'? ")=='Q':
@@ -63,7 +63,7 @@ def scale(obrazek):
                 menu()
         elif scale_choice == 2:
             width=1280
-            height=720
+            height=720 #scale 16:9
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
             obrazek.save("nowy" + type)
@@ -78,7 +78,7 @@ def scale(obrazek):
                 menu()
         elif scale_choice == 3:
             width=1080
-            height=1080
+            height=1080 #scale 1:1
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
             obrazek.save("nowy" + type)
@@ -93,7 +93,7 @@ def scale(obrazek):
                 menu()
         elif scale_choice == 4:
             width=720
-            height=1280
+            height=1280 #scale 9:16
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
             obrazek.save("nowy" + type)
