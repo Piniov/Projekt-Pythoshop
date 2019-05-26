@@ -85,6 +85,7 @@ def scale(obrazek):
             print("Oto rozmiar przeskalowanego pliku (16:9): ", obrazek.size)
             print(colored("\nPowrót do opcji edytowania\n","red"))
             break
+
         elif scale_choice == 3:
             width=1080
             height=1080 #scale 1:1
@@ -96,6 +97,7 @@ def scale(obrazek):
             print("Oto rozmiar przeskalowanego pliku (1:1): ", obrazek.size)
             print(colored("\nPowrót do opcji edytowania\n","red"))
             break
+
         elif scale_choice == 4:
             width=720
             height=1280 #scale 9:16
@@ -107,6 +109,7 @@ def scale(obrazek):
             print("Oto rozmiar przeskalowanego pliku (9:16): ", obrazek.size)
             print(colored("\nPowrót do opcji edytowania\n","red"))
             break
+
         elif scale_choice == 5:
             width=int(input("Podaj szerokość obrazu: "))
             height=int(input("Podaj wysokość obrazu: "))
@@ -122,6 +125,7 @@ def scale(obrazek):
             print("Niewłaściwy klawisz! Spróbuj ponownie.\n")
             print(colored("Powrót do opcji edytowania\n","red"))
             break
+
 
 def rotate(x):
     while True:
