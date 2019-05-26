@@ -129,17 +129,17 @@ def scale(obrazek):
 
 def rotate(x):
     while True:
-        print("O ile stopni chcesz obrócić obraz?(90,180,270)")
+        print(colored("O ile stopni chcesz obrócić obraz?(1 - 90 stopni; 2 - 180 stopni; 3- 270 stopni)\n","yellow"))
         m=input()
-        if m=="90":
+        if m=="1":
             im = Image.open(x).rotate(90) #rotates image by 90 degrees
-        elif m=="180":
+        elif m=="2":
             im = Image.open(x).rotate(180) #rotates image by 180 degrees
-        elif m=="270":
+        elif m=="3":
             im = Image.open(x).rotate(270) #rotates image by 270 degrees
         else:
-            print("Podano błędną wartość! Spróbuj ponownie.\n")
-            print(colored("Powrót do opcji edytowania\n","red"))     #text that will be displayed if user input was invalid
+            print(colored("Podano błędną wartość! Spróbuj ponownie.\n","red")) #user will be informed that his input was incorrect
+            print(colored("Powrót do opcji edytowania\n","yellow"))     #text that will be displayed if user input was invalid
             break
         im.show() #displays rotated image
         im.save(imageFile)
