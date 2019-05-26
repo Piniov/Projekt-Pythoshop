@@ -143,7 +143,7 @@ def rotate(x):
             break
         im.show() #displays rotated image
         im.save(imageFile)
-
+        break
 
 def save_file(x):   #x - chosen file which user wants to save
     while True:
