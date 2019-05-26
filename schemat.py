@@ -33,6 +33,7 @@ def color(x):
         else:
             im = Image.open(x) #changes colors to RGB
         im.show()
+        im.save(imageFile)
         if input("Chcesz zakończyć działanie programu - 'Q', czy dokonać wyboru innej opcji -'R'? ")=='Q':
             print("Dzięki za skorzystanie z naszego programu!")
             break
@@ -51,7 +52,7 @@ def scale(obrazek):
             height=480 #scale 4:3
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS) #proper scaling of an image
             type=".jpg" #a file format
-            obrazek.save("nowy" + type) #naming a new picture
+            obrazek.save(imageFile) #naming a new picture
             obrazek.show() #displays a new image
             print()
             print("Oto rozmiar przeskalowanego pliku (4:3): ", obrazek.size)
@@ -66,7 +67,7 @@ def scale(obrazek):
             height=720 #scale 16:9
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
-            obrazek.save("nowy" + type)
+            obrazek.save(imageFile)
             obrazek.show()
             print()
             print("Oto rozmiar przeskalowanego pliku (16:9): ", obrazek.size)
@@ -81,7 +82,7 @@ def scale(obrazek):
             height=1080 #scale 1:1
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
-            obrazek.save("nowy" + type)
+            obrazek.save(imageFile)
             obrazek.show()
             print()
             print("Oto rozmiar przeskalowanego pliku (1:1): ", obrazek.size)
@@ -96,7 +97,7 @@ def scale(obrazek):
             height=1280 #scale 9:16
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
-            obrazek.save("nowy" + type)
+            obrazek.save(imageFile)
             obrazek.show()
             print()
             print("Oto rozmiar przeskalowanego pliku (9:16): ", obrazek.size)
@@ -111,7 +112,7 @@ def scale(obrazek):
             height=int(input("Podaj wysokość obrazu: "))
             obrazek=obrazek.resize((width,height), Image.ANTIALIAS)
             type=".jpg"
-            obrazek.save("nowy" + type)
+            obrazek.save(imageFile)
             obrazek.show()
             print()
             print("Oto rozmiar przeskalowanego pliku (niestandardowy): ", obrazek.size)
@@ -135,6 +136,7 @@ def rotate(x):
         else:
             print("Podano błędną wartość ") #text that will be displayed if user input was invalid
         im.show() #displays rotated image
+        im.save(imageFile)
         if input("Chcesz zakończyć działanie programu - 'Q', czy dokonać wyboru innej opcji -'R'? ")=='Q':
             print("Dzięki za skorzystanie z naszego programu!")
             break
